@@ -1,0 +1,2403 @@
+/* -------------------- IMPORTED FONTS -------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat&display=swap');
+
+/* -------------------- CSS RESET -------------------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* -------------------- ROOT VARIABLES -------------------- */
+:root {
+  font-family:"Monserrat", sans-serif;
+  --yellow:#f6d64a;
+  --teal:#55bcd5;
+  --purple:#9b26b0;
+  --blue:#499bd2;
+  --dark-gray:#222222;
+  --light-gray:#eaeaea;
+  --white:#ffffff;
+  --black:#000000;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+html {
+  background-color:var(--white);
+}
+
+body {
+  min-width:320px;
+  grid-template-columns:repeat(2,1fr);
+}
+
+main {
+  background-color:var(--white);
+  grid-template-columns:1fr;
+}
+
+h4 {
+  text-transform:uppercase;
+  font-weight:bold;
+}
+
+header {
+  margin-top:1em;
+  display:flex;
+  flex-direction:column;
+  background-color:var(--white);
+  color:var(--dark-gray);
+  text-align:center;
+  background-image:linear-gradient(#00a0c4,#d6eef4);
+}
+
+
+
+
+
+#skip {
+  display:block;
+  color:var(--dark-gray);
+  margin-left:0.75em;
+  font-size:0.7em;
+  text-align:center;
+  font-family:"Montserrat";
+  font-weight:bold;
+  padding-top:0.925em;
+  font-size:0.85em;
+  margin-bottom:-0.37em;
+  text-decoration:none;
+}
+
+nav {
+  background-color:#6cbed7;
+  grid-column:1/-1;
+  margin-bottom:1em;
+}
+
+nav li:first-of-type {
+  border-top:none;
+}
+
+nav li:last-of-type {
+  border-bottom:solid black 0.25px;
+}
+
+nav ul a {
+  display:flex;
+  flex-direction:column;
+  background-color:var(--teal);
+  border:solid black 25px;
+  color:var(--black);
+  font-size:1.1em;
+  width:10em;
+  text-align:center;
+  text-decoration:none;
+  border:none;
+  margin:0 auto;
+  font-weight:bold;
+  text-transform:uppercase;
+}
+
+/*black menu section - start */
+h2 ~ label {
+  display:flex;
+  flex-direction:column;
+  background-color:var(--dark-gray);
+  color:var(--white);
+  text-transform:uppercase;
+  text-align:center;
+  margin-top:-2em;
+  padding-top:1.15em;
+  padding-bottom:1.15em;
+  font-size:0.75em;
+  font-weight:bold;
+}
+/*black menu section - end */
+
+/*blue destinations, inspirations... section - start */
+nav li {
+  border-top:solid black 0.1px;
+  padding-top:2.95em;
+  padding-bottom:2.95em;
+  font-size:0.7em;
+  font-weight:normal;
+}
+/*blue destinations, inspirations... section - end */
+
+
+
+h1, h2, h3 {
+  font-family:"Molle";
+  font-size:2em;
+  margin-top:0.5em;
+  margin-bottom:0.25em;
+  margin-left:0.5em
+}
+
+
+
+p {
+  margin-left:0.5em;
+  margin-right:0.5em;
+  text-align:left;
+  font-size:0.9em;
+  line-height:2em;
+}
+
+#preface {
+  position:relative;
+  display:flex;
+}
+
+/* Logo */
+header img {
+  width:70%;
+  margin-top:-065em;
+  margin-left:-3.5em;
+}
+
+
+/* Wunderlust header */
+h1 {
+  display:flex;
+  margin-left:0.725em;
+  font-size:2.25em;
+}
+
+header p {
+  display:flex;
+  margin-left:1.8em;
+  margin-top:-0.75em;
+  margin-bottom:3.35em;
+  line-height:1.6em;
+}
+
+
+/* Main Navigation - hidden */
+.sr-only {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+#majorca {
+  background-image:linear-gradient(#d6eef4,var(--white));
+    margin-top:-1em;
+}
+
+#majorca h2 {
+  margin-left:0.95em;
+  font-size:1.75em;
+}
+
+#majorca p {
+  margin-bottom:0.5em;
+  margin-left:2.1em;
+  margin-right:1.5em;
+  font-size:0.75em;
+}
+
+h4, p, q, small, nav, button, form {
+  font-family:"Montserrat";
+}
+
+#img-grid img {
+  display:flex;
+  flex-direction:column;
+  margin:0 auto;
+  width:100%;
+  margin-bottom:0.75em;
+}
+/* PLAN YOUR TRIP SECTION! */
+/* white space above plan section */
+
+#plan {
+  background-color:var(--yellow);
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+  margin:0 auto;
+  margin-top:1.41em;
+  margin-bottom:1em;
+}
+
+#plan h3 {
+  font-size:1.75em;
+  margin-left:-2.5em;
+  margin-top:0.85em;
+  margin-bottom:0.525em;
+}
+
+#plan section {
+  background-color:var(--teal);
+  position:relative;
+  margin:0 auto;
+  width:16.75rem;
+  height:14.25rem;
+  margin-bottom:0.2925em;
+  border-radius:8px;
+  border:solid 2px var(--white);
+}
+
+#plan section img {
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:50%;
+  transform: translate(-50%, -50%);
+}
+
+/* plan section - plane image */
+#plan section:nth-child(2) img {
+  margin-top:0.55em;
+}
+
+/* plan section - bed image */
+#plan section:nth-child(3) img {
+  width:58.5%;
+  margin-top:0.3em;
+  margin-left:-0.02em;
+}
+
+/* plan section - boat image */
+#plan section:nth-child(4) img {
+  margin-top:0.57em;
+}
+/* plan section - spoon and fork image */
+#plan section:nth-child(5) img {
+  margin-top:0.8em;
+}
+
+#plan h4 {
+  margin-top:1em;
+  font-size:1.15em;
+}
+/* yellow margin after where to eat picture */
+#plan section:last-of-type {
+  margin-bottom:1.125em;
+}
+
+/* TESTIMONIALS */
+#testimonials {
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+  margin:0 auto;
+}
+
+/* TESTIMONIALS header */
+#testimonials h3 {
+  font-size:1.75em;
+  margin-left:-3.15em;
+  margin-bottom:-0.15em;
+
+}
+
+#testimonials p {
+  text-align:center;
+  font-size:1em;
+  margin-top:-0.3em;
+  margin-bottom:-0.3em;
+}
+
+q {
+  font-style:italic;
+  font-size:1em;
+  text-align:center;
+  color:var(--dark-gray);
+  line-height:1.2em;
+}
+
+
+#testimonials h4 {
+  font-size:1.5em;
+}
+
+#testimonials img {
+  width:46%;
+  max-width:10em;
+  margin-top:0.60em;
+  margin-bottom:0.415em;
+}
+
+/* Amanda Blake photo */
+#testimonials section:nth-child(1) img {
+  margin-top:1em;
+}
+
+#contact {
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+}
+
+/* ABOUT SECTION! */
+
+#about {
+  display:flex;
+  flex-direction:column;
+  background-color:var(--blue);
+  text-align:center;
+  margin:0 auto;
+  margin-top:1em;
+  margin-bottom:1em;
+}
+
+
+#about div {
+  display:grid;
+grid-template-columns:repeat(2,1fr);
+margin-bottom:0.37em;
+}
+
+#about img {
+  width:50%;
+  margin:0 auto;
+  margin-bottom:0.5em;x
+}
+
+
+#about h3 {
+  margin-top: 0.65em;
+  margin-left:-2.8em;
+  line-height:1.19em;
+}
+#about h4 {
+  margin:0 auto;
+  margin-top:0.25em;
+}
+
+#about p {
+  margin:0 auto;
+  margin-top:0.25em;
+  margin-bottom:0.5em;
+}
+
+#about img {
+  width:46%;
+}
+
+#about div section {
+  display:flex;
+  flex-direction:column;
+  margin:0 auto;
+  justify-content:center;
+  text-align:center;
+}
+/* size SECTION */
+#about div section:nth-child(1) {
+  margin-top:0.6em;
+}
+/* size image */
+#about div section:nth-child(1) img {
+  margin-left:4.15em;
+  width:46%;
+}
+/* size header */
+#about div section:nth-child(1) h4{
+  margin-left:4.9em;
+
+}
+/* size paragraph */
+#about div section:nth-child(1) p{
+  margin-left:4em;
+}
+
+/* elevation SECTION */
+#about div section:nth-child(2) {
+  margin-top:0.75em;
+}
+/* elevation image */
+#about div section:nth-child(2) img {
+  margin-left:1em;
+  width:57%;
+}
+/* elevation header */
+#about div section:nth-child(2) h4{
+  margin-left:1.15em;
+
+}
+/* elevation paragraph */
+#about div section:nth-child(2) p{
+  margin-left:2em;
+}
+
+/* LOCATION SECTION */
+#about div section:nth-child(3) {
+  margin-top:0.33em;
+}
+/* location image */
+#about div section:nth-child(3) img {
+  margin-left:4.7em;
+  width:31%;
+}
+/* location header */
+#about div section:nth-child(3) h4{
+  margin-left:3.6em;
+
+}
+/* location paragraph */
+#about div section:nth-child(3) p{
+  margin-left:3em;
+}
+
+/* POPULATION SECTION */
+#about div section:nth-child(4) {
+  margin-top:0.2em;
+}
+/* location image */
+#about div section:nth-child(4) img {
+  margin-left:0.7em;
+  width:70%;
+
+}
+/* location header */
+#about div section:nth-child(4) h4{
+  margin-left:0.725em;
+
+}
+/* location paragraph */
+#about div section:nth-child(4) p{
+  margin-left:2.59em;
+}
+
+
+
+/* form! */
+
+
+#contact {
+  display:flex;
+  flex-direction:column;
+  margin:0 auto;
+}
+
+.form-required {
+  font-size:0.5em;
+  font-family:"Montserrat";
+  font-style:italic;
+  color:var(--dark-gray);
+}
+
+.required {
+  color:var(--purple);
+  font-weight:normal;
+}
+
+form {
+  display:flex;
+  flex-direction:column;
+  margin:0 auto;
+}
+
+input, label {
+  display:block;
+}
+
+label {
+  margin-top:0.1em;
+  margin-bottom:0.1em;
+  text-transform:uppercase;
+  font-weight:bold;
+  
+}
+
+/* Contact Us header */
+#contact h3 {
+  margin-left:-0.5em;
+  margin-bottom:-0.3em;
+}
+
+/* first name and last name labels! */
+#names label {
+  margin-left:-10.15em;
+  margin-top:1.25em;
+  margin-bottom:0.2em;
+}
+
+/* Last Name text box */
+#lName {
+  margin-bottom:1.35em;
+}
+
+/* Contact Method label */
+legend {
+  margin-left:-3.15em;
+}
+
+/* Email label */
+#nums label:first-of-type {
+  margin-left:-8.15em;
+  margin-top:0.75em;
+}
+
+/* Phone label */
+#radio-phone-label {
+  margin-top:1.25em;
+  margin-bottom:0.24em;
+}
+
+/* Email and Phone Number label */
+#nums label {
+  margin-left:-8.15em;
+}
+
+/* Destination label */
+#selects label:first-of-type {
+
+    margin-left:-9.8em;
+  margin-bottom:0.24em;
+}
+
+/* Travel Time label */
+#selects label:last-of-type {
+    margin-top:0.45em;
+    margin-left:-10.2em;
+}
+
+
+/* First Name, Last Name, Email and Phone Number purple boxes */
+input {
+  justify-content:center;
+  margin:0 auto;
+  border:solid 3px var(--purple);
+  width:20em;
+  height:4em;
+  margin-bottom:1em;
+}
+
+/* First Name, Last Name, Email and Phone Number placeholders */
+::placeholder {
+  font-family:"Montserrat";
+  font-size:1.2em;
+  padding-left:0.3em;
+  color:var(--dark-gray);
+}
+
+/* Contact Method label (space between Contact Method and Email radio button) */
+legend {
+  text-transform:uppercase;
+  font-weight:bold;
+  margin-bottom:-0.15em;
+}
+
+/* Destination and Travel Time purple boxes and placeholders */
+select {
+  border:solid 3px var(--purple);
+  width:20em;
+  height:4em;
+  font-family:"Montserrat";
+  margin-bottom:1em;
+}
+
+/* Submit button */
+#mySubmit {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:20em;
+  height:4.3em;
+  text-transform:uppercase;
+  color:var(--white);
+  background-color:var(--purple);
+  font-family:"Montserrat";
+  font-weight:bold;
+  margin:0 auto;
+  margin-top:0.58em;
+  margin-bottom:-0.5em;
+}
+
+/* Makes radio buttons align with purple form boxes */
+.radio-input input {
+  display:inline;
+}
+
+/* All radio button alignment */
+input[type="radio"] {
+  margin-left:-8em;
+}
+
+/* Email radio buttons alignment */
+#radio-email {
+  margin-left:-2.15em;
+}
+
+/* Text radio buttons alignment */
+#radio-text {
+  margin-left:-2.75em;
+}
+
+/* Phone radio buttons alignment */
+#radio-phone {
+  margin-left:-1.6em;
+}
+
+/* Distance between radio buttons and radio text */
+.radio-label {
+  text-transform:none;
+  font-weight:normal;
+  margin-left:-6.3em;
+}
+
+/* Color of radio buttons */
+.radio-input {
+  accent-color:var(--purple);
+}
+
+
+
+footer {
+  display:flex;
+  flex-direction:column;
+  background-color:var(--light-gray);
+  text-align:center;
+  padding-top:20px;
+    margin-top:1.5em;
+  font-family:"Montserrat";
+}
+
+/* Copyright Paragraph */
+footer p {
+  color:var(--black);
+  font-size:0.8425em;
+  text-align:center;
+  text-decoration:none;
+  margin:0 auto;
+  margin-top:-0.6em;
+  margin-bottom:1.19em;
+}
+
+footer a {
+  color:var(--black);
+  font-size:0.9em;
+  text-align:center;
+  text-decoration:none;
+  margin:0 auto;
+  margin-top:0.25em;
+  margin-bottom:1.2em;
+  font-size:0.84em;
+}
+
+footer a:last-child {
+  margin-bottom:2.075em;
+}
+
+
+
+nav ul a {
+  display:flex;
+  flex-direction:column;
+  background-color:var(--yellow);
+  color:var(--black);
+  font-size:1.1em;
+  width:10em;
+  text-align:center;
+  text-decoration:none;
+  border:none;
+  margin:0 auto;
+  font-weight:bold;
+  text-transform:uppercase;
+}
+
+nav li {
+  border-top:solid black 0.1px;
+  padding-top:2.95em;
+  padding-bottom:2.95em;
+  font-size:0.7em;
+  font-weight:normal;
+}
+
+nav li:first-of-type {
+  border-top:none;
+}
+
+nav li:last-of-type {
+  border-bottom:solid black 0.25px;
+}
+
+li {
+  display:block;
+  transition-duration:0.5s;
+}
+
+ul li ul {
+  visibility:hidden;
+  display:none;
+}
+
+ul li:hover > ul, ul li:focus-within > ul, ul li ul:hover, ul li ul:focus {
+  visibility:visible;
+  display:block;
+}
+
+ul li ul li {
+  clear:both;
+  width:100%;
+  background-color:var(--yellow);
+}
+
+/*blue destinations, inspirations... section - end */
+
+h1 {
+  grid-column:1/-1;
+  text-align:left;
+}
+
+#menu {
+  background-color:var(--yellow);
+  display:block;
+  height:1em;
+  margin-top:7.5em;
+  margin-left:14em;
+}
+
+#menu-toggle {
+margin-top:-3.5em;
+  background-color:#6cbed7;
+}
+
+#menu-block {
+  display:none;
+}
+
+/*--MEDIA QUERY medium */
+
+@media screen and (min-width:700px) {
+html {
+  background-color:var(--white);
+}
+
+body {
+  min-width:700px;
+  grid-template-columns:repeat(2,1fr);
+}
+
+main {
+  background-color:var(--white);
+  grid-template-columns:1fr;
+}
+
+h4 {
+  text-transform:uppercase;
+  font-weight:bold;
+}
+
+#navigation {
+  grid-area:nav;
+}
+#preface-2 {
+  grid-area:preface-2;
+}
+
+header {
+  margin-top:1em;
+  display:grid;
+  grid-template-areas:
+    "preface-2"
+    "nav";
+  background-color:var(--white);
+  color:var(--dark-gray);
+  text-align:center;
+  background-image:linear-gradient(var(--teal),#d6eef4);
+}
+
+/* NEW NAV - start */
+
+ul {
+  display:flex;
+}
+
+nav {
+  margin:0 auto;
+
+  
+  
+}
+nav ul a {
+  display:block;
+  background-color:var(--white);
+  color:var(--dark-gray);
+  margin-left:1em;
+  font-size:1.10em;
+  width:10em;
+  height:3.25em;
+  text-align:center;
+  text-transform:uppercase;
+  font-weight:bold;
+  padding-top:1.225em;
+  padding-bottom:1.95em;
+  margin-bottom:2em;
+  font-size:0.75em;
+  text-decoration:none;
+}
+
+nav ul a:hover {
+  background-color:var(--yellow);
+}
+
+
+
+
+
+/* NEW NAV - end */
+
+
+
+#skip {
+  display:block;
+  color:var(--dark-gray);
+  margin-left:0.75em;
+  font-size:0.7em;
+  text-align:center;
+  font-family:"Montserrat";
+  font-weight:bold;
+  padding-top:0.925em;
+  font-size:0.85em;
+  margin-bottom:-0.37em;
+  text-decoration:none;
+}
+
+
+#welcome {
+  margin-top:2.4em;
+  margin-left:-6em;
+}
+
+#logo {
+  grid-area:logo;
+  margin-top:2.8em;
+  margin-left:-0.75em;
+  width:100%;
+}
+
+#wunderlust {
+  grid-area:wunderlust;
+}
+
+#let-wunderlust {
+  grid-area:let-wunderlust;
+  margin-top:0.5em;
+}
+
+#preface-2 {
+  display:grid;
+  grid-template-areas:
+    "logo wunderlust" 
+    "logo let-wunderlust";
+}
+/*black menu section - start */
+/* changed */
+h2 ~ label {
+display:none;
+}
+
+
+h1, h2, h3 {
+  font-family:"Molle";
+  font-size:2em;
+  margin-top:0.5em;
+  margin-bottom:0.25em;
+  margin-left:0.5em
+}
+
+
+
+p {
+  margin-left:0.5em;
+  margin-right:0.5em;
+  text-align:left;
+  font-size:0.9em;
+  line-height:2em;
+}
+
+#preface {
+  position:relative;
+  display:flex;
+}
+
+/* Logo */
+header img {
+  width:70%;
+  margin-top:-0.65em;
+  margin-left:-3.5em;
+}
+
+/* Yellow menu block */
+/* changed */
+#menu-block {
+  display:none;
+}
+
+/* Wunderlust header */
+h1 {
+  display:flex;
+  margin-left:0.725em;
+  font-size:2.25em;
+}
+
+header p {
+  display:flex;
+  margin-left:1.8em;
+  margin-top:-0.75em;
+  margin-bottom:3.35em;
+  line-height:1.6em;
+}
+
+
+
+/* Yellow menu block text */
+#menu-block a {
+    text-decoration:none;
+    color:var(--dark-gray);
+  font-weight:bold;
+  font-size:0.8em;
+}
+
+/* Main Navigation - hidden */
+.sr-only {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+#majorca {
+  background-image:var(--white);
+    margin-top:-1em;
+}
+
+#majorca h2 {
+  margin-left:2.05em;
+  margin-top:1.18em;
+}
+
+#majorca p {
+  margin-top:-0.4em;
+  margin-bottom:0.5em;
+  margin-left:4.65em;
+  margin-right:4.65em;
+  font-size:0.75em;
+  line-height:1.62em;
+}
+
+h4, p, q, small, nav, button, form {
+  font-family:"Montserrat";
+}
+
+#img-grid img {
+  margin:0 auto;
+  width:100%;
+  margin-bottom:0.75em;
+}
+
+
+#majorca-waves {
+  grid-area:waves;
+}
+
+#majorca-beach{
+  grid-area:beach;
+}
+
+#waves-and-beach {
+  display:grid;
+  gap:0.9em;
+  grid-template-areas:
+  "waves beach";
+}
+/* changed */
+#img-grid {
+  margin-left:3.5em;
+  margin-right:3.5em;
+  margin-bottom:-0.8em;
+
+}
+
+/* PLAN YOUR TRIP SECTION! */
+/* white space above plan section */
+
+#plan {
+  background-color:var(--yellow);
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+  margin:0 auto;
+  margin-top:1.41em;
+  margin-bottom:1em;
+}
+
+#how-to-get-there {
+  grid-area:plane;
+}
+
+#places-to-stay {
+  grid-area:bed;
+}
+
+#things-to-do {
+  grid-area:boat;
+}
+
+#where-to-eat {
+  grid-area:utensils;
+}
+
+#plan div {
+  display:grid;
+  grid-template-areas:
+    "plane bed"
+    "boat utensils";
+}
+
+#plan h3 {
+  margin-left:-12.25em;
+  margin-top:0.85em;
+  margin-bottom:0.525em;
+}
+
+
+
+
+
+#plan section {
+  background-color:var(--teal);
+  position:relative;
+  margin:0 auto;
+  width:16.75rem;
+  height:14.25rem;
+  margin-bottom:0.2925em;
+  border-radius:8px;
+  border:solid 2px var(--white);
+}
+
+
+
+
+
+
+#plan section img {
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:50%;
+  transform: translate(-50%, -50%);
+}
+
+/* plan section - plane image */
+#plan section:nth-child(2) img {
+  margin-top:0.55em;
+}
+
+/* plan section - bed image */
+#plan section:nth-child(3) img {
+  width:58.5%;
+  margin-top:0.3em;
+  margin-left:-0.02em;
+}
+
+/* plan section - boat image */
+#plan section:nth-child(4) img {
+  margin-top:0.57em;
+}
+/* plan section - spoon and fork image */
+#plan section:nth-child(5) img {
+  margin-top:0.8em;
+}
+
+#plan h4 {
+  margin-top:1em;
+  font-size:1.15em;
+}
+/* yellow margin after where to eat picture */
+#plan section:last-of-type {
+  margin-bottom:1.125em;
+}
+
+/* TESTIMONIALS */
+#testimonials {
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+  margin:0 auto;
+}
+
+/* TESTIMONIALS header */
+#testimonials h3 {
+  margin-left:-13.4em;
+  margin-bottom:-0.15em;
+  
+}
+
+#miranda-blake {
+  grid-area:miranda;
+}
+
+#max-winter {
+  grid-area:max;
+}
+
+#ines-villegoes {
+  grid-area:ines;
+}
+
+#carmen-lorenzo {
+  grid-area:carmen;
+}
+
+#testimonials div {
+  display:grid;
+  grid-template-areas:
+    "miranda max"
+    "ines carmen";
+}
+
+#testimonials p {
+  text-align:center;
+  font-size:1em;
+  margin-top:-0.3em;
+  margin-bottom:-0.3em;
+}
+
+q {
+  font-style:italic;
+  font-size:1em;
+  text-align:center;
+  color:var(--dark-gray);
+  line-height:1.2em;
+}
+
+
+#testimonials h4 {
+  font-size:1.5em;
+}
+
+#testimonials img {
+  width:46%;
+  max-width:10em;
+  margin-top:0.60em;
+  margin-bottom:0.415em;
+}
+
+/* Amanda Blake photo */
+#testimonials section:nth-child(1) img {
+  margin-top:1em;
+}
+/* new medium */
+#testimonials section:nth-child(1) {
+  margin-bottom:0.75em;
+}
+/* new medium  */
+#testimonials section:nth-child(2) {
+  margin-bottom:0.75em;
+}
+#contact {
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+}
+
+/* ABOUT SECTION! */
+
+#about {
+  display:flex;
+  flex-direction:column;
+  background-color:var(--blue);
+  text-align:center;
+  margin:0 auto;
+  margin-top:1em;
+  margin-bottom:1em;
+}
+
+
+#about div {
+display:flex;
+margin-bottom:0.37em;
+margin-top:-0.6em;
+margin-left:-0.4em;
+}
+
+#about img {
+  width:50%;
+  margin:0 auto;
+  margin-bottom:0.5em;x
+}
+
+
+#about h3 {
+  margin-top: 0.65em;
+  margin-left:-7.5em;
+  line-height:1.19em;
+
+}
+#about h4 {
+  margin:0 auto;
+  margin-top:0.25em;
+}
+
+#about p {
+  margin:0 auto;
+  margin-top:0.25em;
+  margin-bottom:0.5em;
+}
+
+#about img {
+  width:46%;
+}
+
+#about div section {
+  display:flex;
+  flex-direction:column;
+  margin:0 auto;
+  justify-content:center;
+  text-align:center;
+}
+/* size SECTION */
+#about div section:nth-child(1) {
+  margin-top:0.6em;
+}
+/* size image */
+#about div section:nth-child(1) img {
+  margin-left:4.15em;
+  width:40%;
+}
+/* size header */
+#about div section:nth-child(1) h4{
+  margin-left:4.9em;
+
+}
+/* size paragraph */
+#about div section:nth-child(1) p{
+  margin-left:4em;
+}
+
+/* elevation SECTION */
+#about div section:nth-child(2) {
+  margin-top:0.8em;
+}
+/* elevation image */
+#about div section:nth-child(2) img {
+  margin-left:-0.25em;
+  width:60%;
+}
+/* changed elevation header */
+#about div section:nth-child(2) h4{
+  margin-left:-0.25em;
+
+}
+/* changed elevation paragraph */
+#about div section:nth-child(2) p{
+  margin-left:0.5em;
+}
+
+/* LOCATION SECTION */
+#about div section:nth-child(3) {
+  margin-top:0.33em;
+}
+/* changed location image */
+#about div section:nth-child(3) img {
+  margin-left:-2.25em;
+  width:95%;
+}
+/* location header */
+#about div section:nth-child(3) h4{
+  margin-left:-3.15em;
+
+}
+/* location paragraph */
+#about div section:nth-child(3) p{
+  margin-left:-4.25em;
+}
+
+/* POPULATION SECTION */
+#about div section:nth-child(4) {
+  margin-top:0.5em;
+}
+/* location image */
+#about div section:nth-child(4) img {
+  margin-left:-0.5em;
+  width:60%;
+
+}
+/* location header */
+#about div section:nth-child(4) h4{
+  margin-left:-0.5em;
+
+}
+/* location paragraph */
+#about div section:nth-child(4) p{
+  margin-left:1.35em;
+}
+
+
+
+/* form! */
+
+
+#contact {
+  display:flex;
+  flex-direction:column;
+  margin:0 auto;
+}
+
+.form-required {
+  font-size:0.5em;
+  font-family:"Montserrat";
+  font-style:italic;
+  color:var(--dark-gray);
+}
+
+.required {
+  color:var(--purple);
+  font-weight:normal;
+}
+
+form {
+  display:flex;
+  flex-direction:column;
+  margin:0 auto;
+}
+
+input {
+  display:block;
+}
+
+label {
+  margin-top:0.1em;
+  margin-bottom:0.1em;
+  text-transform:uppercase;
+  font-weight:bold;
+  display:inline-block;
+  
+}
+
+/* Contact Us header */
+#contact h3 {
+  margin-left:-10.9em;
+  margin-bottom:-0.3em;
+}
+
+/* first name and last name labels! */
+#names label {
+  margin-left:-30.85em;
+  margin-top:1.25em;
+  margin-bottom:0.2em;
+}
+
+/* Last Name text box */
+#lName {
+  margin-bottom:1.35em;
+}
+
+/* Contact Method label */
+legend {
+  margin-left:-14.5em;
+}
+
+/* Email label */
+#nums label:first-of-type {
+  margin-left:-28.85em;
+  margin-top:0.75em;
+}
+
+#radio-buttons {
+  display:flex;
+  width:49em;
+  margin:0 auto;
+  margin-top:0.25em;
+  margin-left:-6.7em;
+  
+}
+.radio-label {
+  padding-top:0.85em;
+  padding-left:19.5em;
+  font-family:"Montserrat";
+  text-transform:none;
+  font-weight:normal;
+}
+
+/* Phone Number label */
+#nums label {
+  margin-left:-28.85em;
+}
+
+/* Destination label */
+#selects label:first-of-type {
+  margin-left:-30.5em;
+  margin-bottom:0.24em;
+}
+
+/* Travel Time label */
+#selects label:last-of-type {
+    margin-top:0.45em;
+    margin-left:-30.5em;
+}
+
+
+/* First Name, Last Name, Email and Phone Number purple boxes */
+input {
+  justify-content:center;
+  margin:0 auto;
+  border:solid 3px var(--purple);
+  width:47.5em;
+  height:4em;
+  margin-left:3.75em;
+  margin-right:3.75em;
+  margin-bottom:1em;
+}
+
+/* First Name, Last Name, Email and Phone Number placeholders */
+::placeholder {
+  font-family:"Montserrat";
+  font-size:1.2em;
+  padding-left:0.3em;
+  color:var(--dark-gray);
+}
+
+/* Contact Method label (space between Contact Method and Email radio button) */
+legend {
+  text-transform:uppercase;
+  font-weight:bold;
+  margin-left:-13.9em;
+  margin-bottom:0.35em;
+}
+
+/* Destination and Travel Time purple boxes and placeholders */
+select {
+  border:solid 3px var(--purple);
+  height:4em;
+  font-family:"Montserrat";
+  margin-left:2.51em;
+  margin-bottom:1em;
+  width:47.5em;
+}
+
+/* Submit button */
+#mySubmit {
+  display:flex;
+  align-items:right;
+  justify-content:right;
+  width:20em;
+  height:4.3em;
+  text-transform:uppercase;
+  color:var(--white);
+  background-color:var(--purple);
+  font-family:"Montserrat";
+  font-weight:bold;
+  margin:0 auto;
+  margin-top:2em;
+  margin-bottom:-0.5em;
+  margin-left:31.25em;
+}
+
+/* Color of radio buttons */
+input[type="radio"] {
+  accent-color:var(--purple);
+}
+
+
+footer {
+  display:flex;
+  background-color:var(--light-gray);
+  text-align:center;
+  padding-top:20px;
+  margin-right:-2.15em;
+  margin-top:1.5em;
+  font-family:"Montserrat";
+}
+
+/* Copyright Paragraph */
+footer p {
+  color:var(--black);
+  font-size:0.8425em;
+  text-align:center;
+  text-decoration:none;
+  margin:0 auto;
+  margin-top:1.45em;
+  margin-left:3.7em;
+
+}
+
+footer a {
+  color:var(--black);
+  font-size:0.9em;
+  text-align:center;
+  text-decoration:none;
+  margin:0 auto;
+  margin-top:1.9em;
+  margin-right:3.85em;
+  font-size:0.84em;
+  
+}
+
+footer a:last-child {
+  margin-bottom:2.075em;
+}
+
+}
+
+@media screen and (min-width:1200px) {
+* {
+  box-sizing:border-box;
+}
+
+html {
+  background-color:var(--white);
+}
+
+body {
+  min-width:1200px;
+  grid-template-columns:repeat(2,1fr);
+}
+
+main {
+  background-color:var(--white);
+  grid-template-columns:1fr;
+}
+
+h4 {
+  text-transform:uppercase;
+  font-weight:bold;
+}
+
+#navigation {
+  grid-area:nav;
+}
+#preface-2 {
+  grid-area:preface-2;
+}
+
+header {
+  margin-top:1em;
+  display:grid;
+  grid-template-areas:
+    "nav"
+    "preface-2";
+  background-color:var(--white);
+  color:var(--dark-gray);
+  text-align:center;
+  background-image:linear-gradient(var(--teal),var(--white));
+}
+
+/* NEW NAV - start */
+
+ul {
+  display:flex;
+  
+}
+
+
+nav {
+  margin:0 auto;
+  margin-right:0em;
+  margin-top:-2em;
+}
+
+nav ul a {
+  display:block;
+  background-color:var(--white);
+  color:var(--dark-gray);
+  margin-left:0.75em;
+  font-size:0.7em;
+  width:9em;
+  text-align:center;
+  text-transform:uppercase;
+  font-weight:bold;
+  padding-top:0.525em;
+  padding-bottom:0.525em;
+  font-size:1em;
+  text-decoration:none;
+}
+
+
+nav ul a:hover {
+  background-color:var(--yellow);
+}
+
+
+#intro {
+  display:flex;
+}
+
+/* NEW NAV - end */
+
+#skip {
+  display:block;
+  color:var(--dark-gray);
+  margin-left:0.75em;
+  font-size:0.7em;
+  text-align:center;
+  font-family:"Montserrat";
+  font-weight:bold;
+  padding-top:0.925em;
+  font-size:0.85em;
+  margin-bottom:-0.37em;
+  text-decoration:none;
+}
+
+/* changed*/
+#logo {
+  grid-area:logo;
+  margin-top:-0.9em;
+  margin-left:-1.65em;
+  width:35%;
+}
+
+#welcome {
+  margin-top:-1.45em;
+  margin-left:-35em;
+}
+#wunderlust {
+  grid-area:wunderlust;
+}
+
+#let-wunderlust {
+  grid-area:let-wunderlust;
+}
+
+#preface-2 {
+  display:grid;
+  grid-template-areas:
+    "logo wunderlust" 
+    "logo let-wunderlust";
+}
+
+
+h1, h2, h3 {
+  font-family:"Molle";
+  font-size:2em;
+  margin-top:0.5em;
+  margin-bottom:0.25em;
+  margin-left:0.5em
+}
+
+
+
+p {
+  margin-left:0.5em;
+  margin-right:0.5em;
+  text-align:left;
+  font-size:0.9em;
+  line-height:2em;
+}
+
+#preface {
+  position:relative;
+  display:flex;
+}
+
+/* Logo */
+header img {
+  width:70%;
+  margin-top:-0.65em;
+  margin-left:-3.5em;
+}
+
+/* Yellow menu block */
+/* changed */
+#menu-block {
+  display:none;
+}
+
+/* Wunderlust header */
+h1 {
+  display:flex;
+  margin-left:0.725em;
+  font-size:2.25em;
+}
+
+header p {
+  display:flex;
+  margin-left:1.8em;
+  margin-top:-0.75em;
+  margin-bottom:3.35em;
+  line-height:1.6em;
+}
+
+
+
+/* Yellow menu block text */
+#menu-block a {
+    text-decoration:none;
+    color:var(--dark-gray);
+  font-weight:bold;
+  font-size:0.8em;
+}
+
+/* Main Navigation - hidden */
+.sr-only {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+#majorca {
+  background-image:var(--white);
+    margin-top:3em;
+}
+/*MAJORCA HEADER*/
+#majorca h2 {
+  margin-left:2.75em;
+  font-size:1.75em;
+}
+/*MAJORCA PARAGRAPH*/
+#majorca p {
+  margin-bottom:0.5em;
+  margin-left:6.3em;
+  font-size:0.75em;
+}
+
+h4, p, q, small, nav, button, form {
+  font-family:"Montserrat";
+}
+
+#intro {
+  display:grid;
+  grid-template-columns:3fr 4fr;
+  margin-top:3.65em;
+}
+
+#img-grid img {
+  margin:0 auto;
+  width:100%;
+  margin-bottom:-0.5em;
+}
+
+#majorca-waves {
+  grid-area:waves;
+}
+
+#majorca-beach{
+  grid-area:beach;
+}
+
+
+#waves-and-beach {
+  display:grid;
+  gap:0.7em;
+  margin-bottom:1.25em;
+  grid-template-areas:
+  "waves beach";
+}
+/* changed */
+#img-grid {
+  margin-left:1.25em;
+  margin-right:4.5em;
+  margin-top:2em;
+  margin-bottom:3.45em;
+
+}
+
+/* PLAN YOUR TRIP SECTION! */
+/* white space above plan section */
+
+
+#plan {
+  background-color:var(--yellow);
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+  margin:0 auto;
+  margin-top:1.41em;
+  margin-bottom:1em;
+}
+/* *//* *//* */
+#plan div {
+  margin-top:3em;
+  margin-bottom:2em;
+  margin-left:4.35em;
+  margin-right:4.35em;
+}
+
+#how-to-get-there {
+  grid-area:plane;
+}
+
+#places-to-stay {
+  grid-area:bed;
+}
+
+#things-to-do {
+  grid-area:boat;
+}
+
+#where-to-eat {
+  grid-area:utensils;
+}
+
+/* */
+#plan div {
+  display:flex;
+  margin-bottom:5em;
+}
+
+
+/* */
+#plan h3 {
+  
+  font-size:1.75em;
+  margin-left:-30.5em;
+  margin-top:3.05em;
+  margin-bottom:-1em;
+}
+
+/* *//* *//* */
+#plan section {
+  background-color:var(--teal);
+  position:relative;
+  margin:0 auto;
+  width:16rem;
+  height:14.25rem;
+  margin-bottom:0.2925em;
+  border-radius:8px;
+  border:solid 2px var(--white);
+}
+
+
+
+
+
+
+#plan section img {
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:50%;
+  transform: translate(-50%, -50%);
+}
+
+/* plan section - plane image */
+#plan section:nth-child(2) img {
+  margin-top:0.55em;
+}
+
+/* plan section - bed image */
+#plan section:nth-child(3) img {
+  width:58.5%;
+  margin-top:0.3em;
+  margin-left:-0.02em;
+}
+
+/* plan section - boat image */
+#plan section:nth-child(4) img {
+  margin-top:0.57em;
+}
+/* plan section - spoon and fork image */
+#plan section:nth-child(5) img {
+  margin-top:0.8em;
+}
+
+#plan h4 {
+  margin-top:1em;
+  font-size:1.15em;
+}
+/* yellow margin after where to eat picture */
+#plan section:last-of-type {
+  margin-bottom:1.125em;
+}
+
+/* TESTIMONIALS */
+#testimonials {
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+  margin:0 auto;
+}
+
+/* TESTIMONIALS header */
+#testimonials h3 {
+  font-size:1.75em;
+  margin-left:-31.53em;
+  margin-bottom:-0.15em;
+}
+
+#testimonials div {
+  justify-content:center;
+  display:flex;
+
+}
+
+#testimonials p {
+  text-align:center;
+  font-size:0.7em;
+  margin-top:-0.3em;
+  margin-bottom:-0.3em;
+}
+
+q {
+  font-style:italic;
+  font-size:0.7em;
+  text-align:center;
+  color:var(--dark-gray);
+  line-height:1.2em;
+}
+
+
+#testimonials h4 {
+  font-size:1em;
+}
+/* spacing between images */
+#testimonials section {
+  margin-left:6.25em;
+}
+
+/* Amanda Blake and others sections NEW CHANGE for large media!! */
+#testimonials section:nth-child(1) {
+  margin-left:-0.5em;
+}
+
+#testimonials img {
+  width:70%;
+  max-width:10em;
+  margin-top:0.60em;
+  margin-bottom:0.85em;
+}
+
+/* Amanda Blake photo */
+#testimonials section:nth-child(1) img {
+  margin-top:1em;
+}
+
+#contact {
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+}
+
+/* ABOUT SECTION! */
+
+#about {
+  display:flex;
+  flex-direction:column;
+  background-color:var(--blue);
+  text-align:center;
+  margin:0 auto;
+  margin-top:1em;
+  margin-bottom:1em;
+}
+
+
+#about div {
+  display:flex;
+margin-bottom:0.37em;
+margin-left:33em;
+margin-bottom:3.35em;
+}
+
+#about img {
+  width:50%;
+  margin:0 auto;
+  margin-bottom:0.5em;
+}
+
+/*ABOUT YOUR DESTINATION HEADER*/
+#about h3 {
+  margin-top:2.75em;
+  margin-left:-26em;
+  line-height:1.19em;
+  font-size:1.75em;
+
+}
+#about h4 {
+  margin:0 auto;
+  margin-top:0.25em;
+}
+
+#about p {
+  margin:0 auto;
+  margin-top:0.25em;
+  margin-bottom:0.5em;
+}
+
+#about img {
+  width:46%;
+}
+
+#about div section {
+  display:flex;
+  flex-direction:column;
+  margin:0 auto;
+  justify-content:center;
+  text-align:center;
+  margin-left:-17.5em;
+}
+/* size SECTION */
+#about div section:nth-child(1) {
+  margin-top:0.6em;
+}
+/* size image */
+#about div section:nth-child(1) img {
+  margin-left:4.15em;
+  width:40%;
+}
+/* size header */
+#about div section:nth-child(1) h4{
+  margin-left:4.9em;
+
+}
+/* size paragraph */
+#about div section:nth-child(1) p{
+  margin-left:4em;
+}
+
+/* elevation SECTION */
+#about div section:nth-child(2) {
+  margin-top:0.8em;
+}
+/* elevation image */
+#about div section:nth-child(2) img {
+  margin-left:-0.25em;
+  width:60%;
+}
+/* changed elevation header */
+#about div section:nth-child(2) h4{
+  margin-left:-0.25em;
+
+}
+/* changed elevation paragraph */
+#about div section:nth-child(2) p{
+  margin-left:0.5em;
+}
+
+/* LOCATION SECTION */
+#about div section:nth-child(3) {
+  margin-top:0.33em;
+}
+/* changed location image */
+#about div section:nth-child(3) img {
+  margin-left:-2.25em;
+  width:95%;
+}
+/* location header */
+#about div section:nth-child(3) h4{
+  margin-left:-3.15em;
+
+}
+/* location paragraph */
+#about div section:nth-child(3) p{
+  margin-left:-4.25em;
+}
+
+/* POPULATION SECTION */
+#about div section:nth-child(4) {
+  margin-top:0.5em;
+}
+/* location image */
+#about div section:nth-child(4) img {
+  margin-left:-0.5em;
+  width:60%;
+
+}
+/* location header */
+#about div section:nth-child(4) h4{
+  margin-left:-0.5em;
+
+}
+/* location paragraph */
+#about div section:nth-child(4) p{
+  margin-left:1.35em;
+}
+
+
+
+/* form! */
+
+
+
+.form-required {
+  font-size:0.5em;
+  font-family:"Montserrat";
+  font-style:italic;
+  color:var(--dark-gray);
+}
+
+.required {
+  color:var(--purple);
+  font-weight:normal;
+}
+
+form {
+  display:flex;
+  flex-direction:column;
+  margin:0 auto;
+}
+
+input {
+  display:block;
+}
+
+label {
+  margin-top:0.1em;
+  margin-bottom:0.1em;
+  text-transform:uppercase;
+  font-weight:bold;
+  display:inline-block;
+  
+}
+
+/* Contact Us header */
+#contact h3 {
+  margin-left:-1.5em;
+  margin-bottom:-0.3em;
+}
+
+/* first name and last name labels! */
+#names label {
+  margin-left:-12.45em;
+  margin-top:1.25em;
+  margin-bottom:0.2em;
+}
+
+/* Last Name text box */
+#lName {
+  margin-bottom:1.35em;
+}
+
+/* Contact Method label */
+legend {
+  margin-left:-6em;
+}
+
+/* Email label */
+#nums label:first-of-type {
+  margin-left:-13em;
+  margin-top:1.25em;
+}
+
+/* Phone label */
+#radio-phone-label {
+  margin-top:1.25em;
+  margin-bottom:0.24em;
+}
+
+/* Phone Number label */
+#nums label {
+  margin-top:0.45em;
+  margin-left:-13em;
+}
+
+#section-3 {
+  margin-top:4.5744em;
+}
+/* Destination label */
+#selects label:first-of-type {
+  
+  margin-left:-21.15em;
+  margin-bottom:0.24em;
+}
+
+/* Travel Time label */
+#selects label:last-of-type {
+    margin-top:0.45em;
+    margin-left:-21.15em;
+}
+
+
+/* First Name, Last Name, Email and Phone Number purple boxes */
+input {
+  justify-content:center;
+  margin:0 auto;
+  border:solid 3px var(--purple);
+  width:25.75em;
+  height:3.5em;
+  margin-left:3.1em;
+  margin-bottom:1em;
+}
+
+/* email and phone number purple boxes */
+#nums {
+  margin-top:3.87em;
+  margin-left:-2.25em;
+}
+/* First Name, Last Name, Email and Phone Number placeholders */
+::placeholder {
+  font-family:"Montserrat";
+  font-size:1.2em;
+  padding-left:0.3em;
+  color:var(--dark-gray);
+}
+
+/* Contact Method label (space between Contact Method and Email radio button) */
+legend {
+  text-transform:uppercase;
+  font-weight:bold;
+  margin-bottom:-0.15em;
+}
+/* CONTACT FORM SPLIT IN THREE AREAS! */
+#contact {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  margin:0 auto;
+  margin-left:2em;
+  margin-left:2em;
+  margin-top:3.75em;
+}
+
+/* Destination and Travel Time purple boxes and placeholders */
+select {
+  border:solid 3px var(--purple);
+  font-family:"Montserrat";
+  margin-bottom:1em;
+  padding:1em;
+  width:25.75em;
+  height:3.5em;
+  margin-left:-8em;
+  margin-top:-0.1em;
+}
+
+/* Submit button */
+#mySubmit {
+  display:flex;
+  align-items:right;
+  justify-content:right;
+  width:18em;
+  height:3.3em;
+  text-transform:uppercase;
+  color:var(--white);
+  background-color:var(--purple);
+  font-family:"Montserrat";
+  font-weight:bold;
+  margin:0 auto;
+  margin-top:2.2em;
+  margin-bottom:-0.5em;
+  margin-left:5.575em;
+}
+
+
+/* Makes radio buttons align with purple form boxes */
+
+#radio-buttons {
+  display:flex;
+  width:24em;
+  margin:0 auto;
+  margin-top:0.25em;
+  margin-left:0em;
+  
+}
+.radio-label {
+  padding-top:0.5em;
+  padding-left:13.5em;
+  font-family:"Montserrat";
+}
+
+/* Email radio buttons alignment */
+#radio-email {
+  margin-left:-2.15em;
+}
+
+/* Text radio buttons alignment */
+#radio-text {
+  margin-left:-2.75em;
+}
+
+/* Phone radio buttons alignment */
+#radio-phone {
+  margin-left:-1.6em;
+}
+
+/* Distance between radio buttons and radio text */
+.radio-label {
+  text-transform:none;
+  font-weight:normal;
+  margin-left:-6.3em;
+}
+
+/* Color of radio buttons */
+input[type="radio"] {
+  accent-color:var(--purple);
+}
+
+
+footer {
+  display:grid;
+  grid-template-columns: 8fr 2.5fr 2.5fr;
+  background-color:var(--light-gray);
+  text-align:center;
+  padding-top:27px;
+  margin-top:1.5em;
+  font-family:"Montserrat";
+}
+
+/* Copyright Paragraph */
+footer p {
+  color:var(--black);
+  font-size:0.8425em;
+  text-align:center;
+  text-decoration:none;
+  font-size:0.7em;
+  margin:0 auto;
+  margin-top:0em;
+  margin-left:6.75em;
+}
+
+footer a {
+  color:var(--black);
+  font-size:0.7em;
+  text-align:center;
+  text-decoration:none;
+  margin:0 auto;
+  margin-top:0.4925em;
+  margin-right:7.1em;
+  
+}
+
+footer a:last-child {
+  margin-bottom:2.075em;
+}
+
+
+}
